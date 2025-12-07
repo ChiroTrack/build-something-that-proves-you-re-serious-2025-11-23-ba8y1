@@ -237,6 +237,41 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 hidden md:block">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex gap-8">
+                    <a href="https://thechirotrack.com" class="text-slate-700 hover:text-blue-600 font-semibold transition-colors">Home</a>
+                    <a href="#features" class="text-slate-700 hover:text-blue-600 font-semibold transition-colors">Features</a>
+                    <a href="what-to-do-after-car-accident-oakland.html" class="text-slate-700 hover:text-blue-600 font-semibold transition-colors">What to Do After a Car Accident in Oakland</a>
+                </div>
+                <a href="https://thechirotrack.com" class="button-primary text-white px-6 py-2 rounded-lg font-bold text-sm">Enroll Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 md:hidden">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-1">
+                    <button class="text-slate-700" onclick="toggleMobileMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <a href="https://thechirotrack.com" class="button-primary text-white px-4 py-2 rounded-lg font-bold text-sm">Enroll</a>
+            </div>
+            <div id="mobileMenu" class="hidden pb-4 space-y-2">
+                <a href="https://thechirotrack.com" class="block text-slate-700 hover:text-blue-600 font-semibold py-2 transition-colors">Home</a>
+                <a href="#features" class="block text-slate-700 hover:text-blue-600 font-semibold py-2 transition-colors">Features</a>
+                <a href="what-to-do-after-car-accident-oakland.html" class="block text-slate-700 hover:text-blue-600 font-semibold py-2 transition-colors">What to Do After a Car Accident in Oakland</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="gradient-hero text-white py-20 md:py-32 relative overflow-hidden">
         <div class="absolute inset-0 overflow-hidden">
@@ -800,6 +835,12 @@
     </footer>
 
     <script>
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
         // Countdown Timer
         function updateCountdown() {
             const now = new Date().getTime();
